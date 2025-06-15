@@ -1,19 +1,17 @@
 # Previsão de Demandas da FATEC de Mauá com Machine Learning
 
+Este projeto analisa e prevê a quantidade de inscritos nos vestibulares da FATEC de Mauá, utilizando técnicas de **Machine Learning aplicadas a séries temporais**. Os dados foram coletados via **Web Scraping automatizado em C# com Selenium**, tratados e analisados com **Python** em notebooks interativos, utilizando modelos como **ARIMA, Prophet e Holt-Winters**.
+
+> [!TIP]
+> Desenvolvido como atividade da disciplina de **Aprendizado de Máquina** no 5º semestre de **Desenvolvimento de Software Multiplataforma** da FATEC Mauá, sob orientação do professor Bruno Zolotareff.
+
 ![Google Colab](https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white)
-![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![Selenium](https://img.shields.io/badge/selenium-1fb529?style=for-the-badge&logo=selenium&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-9843af.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
-![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
-![C#](https://img.shields.io/badge/c%23-9843af.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-
-Este projeto tem como objetivo analisar e prever a quantidade de inscritos nos vestibulares da FATEC Mauá ao longo dos anos, utilizando modelos de séries temporais e algoritmos de aprendizagem de máquina como ARIMA, Prophet e Holt-Winters. A coleta de dados foi automatizada com uma aplicação em C# via Web Scraping e os modelos foram implementados em Python por meio de notebooks interativos.
-
-> [!TIP]
-> Este projeto foi desenvolvido como parte das atividades da disciplina de Aprendizagem de Máquina da FATEC de Mauá, no 5º semestre do tecnólogo de Desenvolvimento de Software Multiplataforma. Sob orientação do professor Bruno Zolotareff, o trabalho teve como objetivo aplicar técnicas de séries temporais em dados reais, explorando modelos de previsão para a demanda de inscritos nos vestibulares da instituição.
 
 ## Autores
 
@@ -25,10 +23,10 @@ Este projeto tem como objetivo analisar e prever a quantidade de inscritos nos v
 ## Sumário
 
 - [Descrição do Projeto](#descrição-do-projeto)
-  - [Coleta de Dados](#coleta-de-dados)
+- [Coleta de Dados](#coleta-de-dados)
 - [Tratamento de Dados](#tratamento-de-dados)
 - [Modelos de Previsão Utilizados](#modelos-de-previsão-utilizados)
-  - [Regressão Linear](#-regressão-linear)
+  - [Regressão Linear](#regressão-linear)
   - [Holt-Winters](#holt-winters)
   - [ARIMA (AutoRegressive Integrated Moving Average)](#arima-autoregressive-integrated-moving-average)
   - [Prophet](#prophet)
@@ -36,13 +34,12 @@ Este projeto tem como objetivo analisar e prever a quantidade de inscritos nos v
 - [Resultados Obtidos](#resultados-obtidos)
 - [Análise dos Resultados](#análise-dos-resultados)
 - [Ferramentas e Tecnologias Utilizadas](#ferramentas-e-tecnologias-utilizadas)
-  - [Bibliotecas Python Utilizadas](#bibliotecas-python-utilizadas)
 - [Conclusão](#conclusão)
 - [Licença](#licença)
 
 ---
 
-## **Descrição do Projeto**
+## Descrição do Projeto
 
 A proposta desta pesquisa é desenvolver modelos de previsão baseados em dados históricos de inscrições da FATEC Mauá, utilizando técnicas estatísticas e algoritmos de Machine Learning.
 
@@ -52,7 +49,7 @@ A aplicação prática desses modelos visa apoiar a tomada de decisões e a aná
 - 📁 [Arquivo do relatório PowerBI](./power_bi/Aprendizagem_Máquina.pbix)
 - 📁 [PDF da apresentação exportada do PowerBI](./Apresentação%20PowerBI.pdf)
 
-### **Coleta de Dados**
+## Coleta de Dados
 
 A extração dos dados foi realizada com um software de automação desenvolvido em **C# .NET Framework** utilizando **Selenium** para Web Scraping. A aplicação acessa o site oficial e extrai informações sobre as demandas de todos os cursos desde 2007 até 2025, salvando-as em arquivos CSV.
 
@@ -62,9 +59,9 @@ A extração dos dados foi realizada com um software de automação desenvolvido
 
 ---
 
-## **Tratamento de Dados**
+## Tratamento de Dados
 
-Para a utilização dos dados para a análise, foi feito uma trativa e normalização dos dados, para se obter uma interpretação mais precisa.
+Para a utilização dos dados para a análise, foi feita uma trativa e normalização dos dados, para se obter uma interpretação mais precisa.
 
 - Padronização de nomes de cursos e períodos, como: Diurno (Manhã e Tarde), Noturno e EAD.
 - Normalização de semestres.
@@ -73,9 +70,9 @@ Para a utilização dos dados para a análise, foi feito uma trativa e normaliza
 
 ---
 
-## **Modelos de Previsão Utilizados**
+## Modelos de Previsão Utilizados
 
-### 🔹 **Regressão Linear**
+### Regressão Linear
 
 > A regressão linear é uma técnica de análise de dados que prevê o valor de dados desconhecidos usando outro valor de dados relacionado e conhecido.
 
@@ -109,7 +106,7 @@ Ela é ideal para identificar tendências lineares ao longo do tempo e é fácil
 
 ![Evolução dos Inscritos por Curso vs Média Geral (por Ano)](./images/geral/evolucao-dos-inscritos-por-curso-vs-media-geral-por-ano.png)
 
-### **Holt-Winters**
+### Holt-Winters
 
 > Modelo que utiliza suavização exponencial com três componentes: nível, tendência e sazonalidade.
 
@@ -124,7 +121,7 @@ Ela é ideal para identificar tendências lineares ao longo do tempo e é fácil
 
 ![Projeção da quantidade de Inscritos (Fabricação Mecânica, 1º Semestre, Noite)](./images/holtwinter/quantidade-de-inscritos-previsao-fabricacaomecanica-1-noite.png)
 
-### **ARIMA (AutoRegressive Integrated Moving Average)**
+### ARIMA (AutoRegressive Integrated Moving Average)
 
 > É um algoritmo de estatísticas comumente usado para previsão de série temporais. O algoritmo é especialmente útil para conjuntos de dados simples com menos de 100 séries temporais.
 
@@ -143,7 +140,7 @@ Ela é ideal para identificar tendências lineares ao longo do tempo e é fácil
 
 ![Projeção da quantidade de Inscritos (Fabricação Mecânica, 1º Semestre, Noite)](./images/arima/quantidade-de-inscritos-previsao-fabricacaomecanica-1-noite.png)
 
-### **Prophet**
+### Prophet
 
 > É um algoritmo de previsão de séries temporais baseado em um modelo aditivo em que as tendências não lineares se ajustam à sazonalidade anual, semanal e diária. Funciona melhor com séries temporais que tenham fortes efeitos sazonais e várias temporadas de dados históricos.
 
@@ -187,11 +184,9 @@ Comparativo entre as projeções feitas com o ARIMA, Prophet e o Holt-Winters:
 
 ![Projeção da quantidade de Inscritos (Desenvolvimento de Software Multiplataforma, 1º Semestre, Noite)](./images/comparativo/previsao-dsm-1-noite.png)
 
-## **Resultados Obtidos**
+## Resultados Obtidos
 
 As previsões realizadas com os modelos **ARIMA, Prophet e Holt-Winters** apresentaram resultados distintos em valores absolutos, mas convergiram na mesma conclusão geral: a demanda por inscrições nos cursos da FATEC de Mauá está em queda ao longo dos anos.
-
-- 📁 [PDF da apresentação exportada do PowerBI](./Apresentação%20PowerBI.pdf)
 
 Cada modelo e algoritmo registraram desfechos diferentes:
 
@@ -210,9 +205,11 @@ Em resumo, os dados e modelos indicam que:
 - A média de inscritos caiu nos últimos anos.
 - A tendência de baixa na procura exige atenção institucional para ações de divulgação, revisão curricular e adaptação às demandas do mercado.
 
+📁 [PDF da apresentação exportada do PowerBI](./Apresentação%20PowerBI.pdf)
+
 ---
 
-## **Análise dos Resultados**
+## Análise dos Resultados
 
 - **Holt-Winters** suaviza muito os dados e pode não reagir bem a mudanças abruptas.
 - **ARIMA** se aproxima bem em alguns cenários, mas é sensível ao baixo volume de dados.
@@ -223,46 +220,38 @@ Em resumo, os dados e modelos indicam que:
 
 ---
 
-## **Ferramentas e Tecnologias Utilizadas**
+## Ferramentas e Tecnologias Utilizadas
 
-- **Programa de Automação de C# com Selenium (.NET Framework)**: Coleta automatizada de dados.
-- **Python (Jupyter Notebooks) Google Colab**: Análise, modelagem e visualização dos dados.
-- **Pandas / NumPy / Matplotlib / Statsmodels / Prophet**: Bibliotecas para manipulação de dados e previsão.
-- **Excel**: Tratamento e aplicação dos algoritmos e visualização da previsão dos dados.
+- **C# (.NET Framework)** com **[Selenium](https://www.selenium.dev/)**: Utilizado para automação da coleta de dados via Web Scraping.
+- Python com Jupyter Notebooks no **[Google Colab](https://colab.research.google.com/)**: Para análise, visualização e modelagem preditiva.
+- **Excel**: Apoio na limpeza, estruturação e visualização de dados.
 
 ### Bibliotecas Python Utilizadas
 
-#### 🔢 Manipulação e Análise de Dados
+- [pandas](https://pandas.pydata.org/) — Leitura e manipulação de dados tabulares.
+- [numpy](https://numpy.org/) — Operações matemáticas e manipulação de arrays.
 
-- pandas – Leitura e manipulação de dados tabulares.
-- numpy – Operações numéricas e matrizes.
+- [matplotlib](https://matplotlib.org/) — Criação de gráficos e visualizações estatísticas.
 
-#### 📈 Visualização
+- [scipy.stats](https://docs.scipy.org/doc/scipy/) — Cálculo de correlação de Pearson.
+- [scikit-learn](https://scikit-learn.org/stable/modules/linear_model.html) — Modelos de Regressão Linear e métricas (R², MAE, RMSE).
+- [statsmodels](https://www.statsmodels.org/stable/index.html) — Modelos ARIMA e Holt-Winters.
 
-- matplotlib.pyplot – Criação de gráficos e visualizações dos dados e previsões.
+- [prophet](https://facebook.github.io/prophet/) — Modelo aditivo robusto para séries temporais.
+- [pmdarima](https://alkaline-ml.com/pmdarima/) — Auto-ARIMA para seleção automática de parâmetros.
 
-#### 📊 Modelagem e Estatística
+- [datetime](https://docs.python.org/3/library/datetime.html) — Manipulação de datas.
+- [csv](https://docs.python.org/3/library/csv.html) — Leitura e escrita de arquivos CSV.
+- [re](https://docs.python.org/3/library/re.html) — Expressões regulares (Regex) para tratamento de texto.
 
-- scipy.stats.pearsonr – Cálculo de correlação de Pearson.
-- sklearn.linear_model.LinearRegression – Regressão linear.
-- sklearn.metrics – Avaliação de modelos com métricas como R², MAE, RMSE.
-- statsmodels.tsa.arima.model.ARIMA – Modelo ARIMA.
-- statsmodels.tsa.holtwinters.ExponentialSmoothing – Modelo Holt-Winters.
+### Visualização de Resultados
 
-#### 🔮 Previsão Avançada
-
-- prophet – Biblioteca do Facebook para séries temporais.
-- pmdarima.auto_arima – Automação do ajuste de parâmetros para o ARIMA.
-
-#### ⚙️ Utilitários
-
-- datetime – Manipulação de datas.
-- csv – Leitura e escrita de arquivos CSV.
-- re – Expressões regulares.
+- **[Power BI](https://powerbi.microsoft.com/pt-br/)** — Criação de dashboards interativos e apresentação dos resultados.
+- **[Microsoft Excel](https://www.microsoft.com/pt-br/microsoft-365/excel)** — Complemento para visualização e organização de dados.
 
 ---
 
-## **Conclusão**
+## Conclusão
 
 Este projeto demonstrou como a aplicação de algoritmos de Machine Learning pode auxiliar na previsão de demandas acadêmicas, apoiando tomadas de decisão mais estratégicas e informadas.
 
@@ -270,7 +259,7 @@ Apesar dos desafios apresentados por algumas variações nos dados, os modelos m
 
 ---
 
-## **Licença**
+## Licença
 
 Este projeto está licenciado sob a Licença MIT.  
 Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
