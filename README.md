@@ -10,9 +10,10 @@
 ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 ![C#](https://img.shields.io/badge/c%23-9843af.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
-Este projeto tem como objetivo analisar e prever a quantidade de inscritos nos vestibulares da FATEC Mauá ao longo dos anos, utilizando modelos de séries temporais e algoritmos de aprendizagem de máquina como ARIMA, Prophet e Holt-Winters.
+Este projeto tem como objetivo analisar e prever a quantidade de inscritos nos vestibulares da FATEC Mauá ao longo dos anos, utilizando modelos de séries temporais e algoritmos de aprendizagem de máquina como ARIMA, Prophet e Holt-Winters. A coleta de dados foi automatizada com uma aplicação em C# via Web Scraping e os modelos foram implementados em Python por meio de notebooks interativos.
 
-A coleta de dados foi automatizada com uma aplicação em C# via Web Scraping e os modelos foram implementados em Python por meio de notebooks interativos.
+> [!TIP]
+> Este projeto foi desenvolvido como parte das atividades da disciplina de Aprendizagem de Máquina da FATEC de Mauá, no 5º semestre do tecnólogo de Desenvolvimento de Software Multiplataforma. Sob orientação do professor Bruno Zolotareff, o trabalho teve como objetivo aplicar técnicas de séries temporais em dados reais, explorando modelos de previsão para a demanda de inscritos nos vestibulares da instituição.
 
 ## Autores
 
