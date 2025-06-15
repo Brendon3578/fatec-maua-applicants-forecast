@@ -22,15 +22,35 @@ Este projeto tem como objetivo analisar e prever a quantidade de inscritos nos v
 - Elias Sousa Barbosa  
 - Rafael Ricardo Gonçalves
 
+## Sumário
+
+- [Descrição do Projeto](#descrição-do-projeto)
+  - [Coleta de Dados](#coleta-de-dados)
+- [Tratamento de Dados](#tratamento-de-dados)
+- [Modelos de Previsão Utilizados](#modelos-de-previsão-utilizados)
+  - [Regressão Linear](#-regressão-linear)
+  - [Holt-Winters](#holt-winters)
+  - [ARIMA (AutoRegressive Integrated Moving Average)](#arima-autoregressive-integrated-moving-average)
+  - [Prophet](#prophet)
+- [Projeção com os 3 Modelos](#projeção-com-os-3-modelos)
+- [Resultados Obtidos](#resultados-obtidos)
+- [Análise dos Resultados](#análise-dos-resultados)
+- [Ferramentas e Tecnologias Utilizadas](#ferramentas-e-tecnologias-utilizadas)
+  - [Bibliotecas Python Utilizadas](#bibliotecas-python-utilizadas)
+- [Conclusão](#conclusão)
+- [Licença](#licença)
+
 ---
 
 ## **Descrição do Projeto**
 
-🔗 [Link da apresentação exportada do PowerBI](./Apresentação%20PowerBI.pdf)
-
 A proposta desta pesquisa é desenvolver modelos de previsão baseados em dados históricos de inscrições da FATEC Mauá, utilizando técnicas estatísticas e algoritmos de Machine Learning.
 
 A aplicação prática desses modelos visa apoiar a tomada de decisões e a análise de tendências para os próximos vestibulares da Faculdade de Tecnologia de Mauá.
+
+- 🔗 [Link do relatório do PowerBI Online](https://app.powerbi.com/links/yU5bZQ8rvX?ctid=cf72e2bd-7a2b-4783-bdeb-39d57b07f76f&pbi_source=linkShare)
+- 📁 [Arquivo do relatório PowerBI](./power_bi/Aprendizagem_Máquina.pbix)
+- 📁 [PDF da apresentação exportada do PowerBI](./Apresentação%20PowerBI.pdf)
 
 ### **Coleta de Dados**
 
@@ -59,7 +79,7 @@ Para a utilização dos dados para a análise, foi feito uma trativa e normaliza
 
 > A regressão linear é uma técnica de análise de dados que prevê o valor de dados desconhecidos usando outro valor de dados relacionado e conhecido.
 
-🔗 [Link da previsão com Regressão Linear](./notebook/Análise_de_Demandas_da_Fatec_de_Mauá_(1_3)_Analise_de_Pearson.ipynb)
+🔗 [Notebook Python com a previsão com Regressão Linear](./notebook/Análise_de_Demandas_da_Fatec_de_Mauá_(1_3)_Analise_de_Pearson.ipynb)
 
 - Foi utilizada como modelo base por sua simplicidade e fácil interpretação.
 - Ela é ideal para identificar tendências lineares ao longo do tempo, como o crescimento ou queda no número de inscritos.
@@ -89,11 +109,12 @@ Ela é ideal para identificar tendências lineares ao longo do tempo e é fácil
 
 ![Evolução dos Inscritos por Curso vs Média Geral (por Ano)](./images/geral/evolucao-dos-inscritos-por-curso-vs-media-geral-por-ano.png)
 
-### 🔹 **Holt-Winters**
+### **Holt-Winters**
 
 > Modelo que utiliza suavização exponencial com três componentes: nível, tendência e sazonalidade.
 
-🔗 [Link da previsão com algoritmo Holt Winters](./notebook/Vestibular_Graficos_Projeção.xlsx)
+🔗 [Notebook Python da previsão com algoritmo Prophet e Holt-Winters](./notebook/1sem_Prophet.ipynb)
+🔗 [Planilha Excel da previsão com algoritmo Prophet e Holt Winters](./notebook/Vestibular_Graficos_Projeção.xlsx)
 
 - Leva em conta o nível, tendência e sazonalidade dos dados.
 - Recomendado para séries temporais com comportamento sazonal regular.
@@ -103,11 +124,11 @@ Ela é ideal para identificar tendências lineares ao longo do tempo e é fácil
 
 ![Projeção da quantidade de Inscritos (Fabricação Mecânica, 1º Semestre, Noite)](./images/holtwinter/quantidade-de-inscritos-previsao-fabricacaomecanica-1-noite.png)
 
-### 🔹 **ARIMA (AutoRegressive Integrated Moving Average)**
+### **ARIMA (AutoRegressive Integrated Moving Average)**
 
 > É um algoritmo de estatísticas comumente usado para previsão de série temporais. O algoritmo é especialmente útil para conjuntos de dados simples com menos de 100 séries temporais.
 
-🔗 [Link da previsão com algoritmo ARIMA](./notebook/Análise_de_Demandas_da_Fatec_de_Mauá_(2_3)_Projeção_Arima.ipynb)
+🔗 [Notebook Python da previsão com algoritmo ARIMA](./notebook/Análise_de_Demandas_da_Fatec_de_Mauá_(2_3)_Projeção_Arima.ipynb)
 
 - Modelo que combina componentes autoregressivos, diferenciação para remover tendências e média móvel.
 - Baseado em três componentes:
@@ -122,13 +143,13 @@ Ela é ideal para identificar tendências lineares ao longo do tempo e é fácil
 
 ![Projeção da quantidade de Inscritos (Fabricação Mecânica, 1º Semestre, Noite)](./images/arima/quantidade-de-inscritos-previsao-fabricacaomecanica-1-noite.png)
 
-### 🔹 **Prophet**
+### **Prophet**
 
 > É um algoritmo de previsão de séries temporais baseado em um modelo aditivo em que as tendências não lineares se ajustam à sazonalidade anual, semanal e diária. Funciona melhor com séries temporais que tenham fortes efeitos sazonais e várias temporadas de dados históricos.
 
-🔗 [Link da previsão com algoritmo PROPHET (1 Semestre)](./notebook/1sem_Prophet.ipynb)
-
-🔗 [Link da previsão com algoritmo PROPHET (2 Semestre)](./notebook/2sem_Prophet.ipynb)
+- 🔗 [Notebook Python da previsão com algoritmo Prophet e Holt-Winters](./notebook/1sem_Prophet.ipynb)
+- 🔗 [Planilha Excel da previsão com algoritmo Prophet e Holt Winters](./notebook/Vestibular_Graficos_Projeção.xlsx)
+- 🔗 [Notebook Python da previsão com algoritmo Prophet (2 Semestre)](./notebook/2sem_Prophet.ipynb)
 
 - Modelo de fácil aplicação desenvolvido pelo Facebook. Ideal para séries com tendência, sazonalidade e eventos especiais.
 - Modelo aditivo com componentes de tendência, sazonalidade e feriados.
@@ -170,7 +191,7 @@ Comparativo entre as projeções feitas com o ARIMA, Prophet e o Holt-Winters:
 
 As previsões realizadas com os modelos **ARIMA, Prophet e Holt-Winters** apresentaram resultados distintos em valores absolutos, mas convergiram na mesma conclusão geral: a demanda por inscrições nos cursos da FATEC de Mauá está em queda ao longo dos anos.
 
-🔗 [Link da apresentação exportada do PowerBI](./Apresentação%20PowerBI.pdf)
+- 📁 [PDF da apresentação exportada do PowerBI](./Apresentação%20PowerBI.pdf)
 
 Cada modelo e algoritmo registraram desfechos diferentes:
 
@@ -251,4 +272,7 @@ Apesar dos desafios apresentados por algumas variações nos dados, os modelos m
 
 ## **Licença**
 
-Este projeto está aberto para consulta e aprendizado. Fique à vontade para adaptar ou expandir os métodos utilizados.
+Este projeto está licenciado sob a Licença MIT.  
+Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+O projeto está aberto para consulta e aprendizado. Fique à vontade para adaptar ou expandir os métodos utilizados.
